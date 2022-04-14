@@ -74,4 +74,16 @@ public class ProductService implements TableService {
         productEntityList = productRepositories.listLatestProduct();
         return productEntityList;
     }
+
+//    public List<ProductEntity> listCategoryProduct(String brand) {
+//        List<ProductEntity> productEntityList = new ArrayList<>();
+//        productEntityList = productRepositories.listCategoryProduct(brand);
+//        return productEntityList;
+//    }
+//
+//    public List<ProductEntity> listPriceProduct(String start, String end) {
+//        List<ProductEntity> productEntityList = new ArrayList<>();
+//        productEntityList = productRepositories.listPriceProduct(start, end);
+//        return productEntityList;
+//    }
 }

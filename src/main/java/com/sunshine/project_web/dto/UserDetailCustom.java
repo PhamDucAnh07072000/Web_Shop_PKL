@@ -11,7 +11,8 @@ import java.util.Collections;
 @Data
 public class UserDetailCustom extends User {
     private String email;
-    private String avarta;
+    private String avatar;
+    private String userName;
     private Long id;
 
 

@@ -40,7 +40,9 @@
 <%--            <span class="form-message"></span>--%>
 <%--        </div>--%>
 
-        <button class="form-submit">Đăng ký</button>
+        <button class="form-submit" style="margin-bottom: 12px">Đăng Nhập</button>
+        <a href="/_member/signup" style="text-decoration: none; font-size: 13px">Creat Account Now</a>
+        <p style="font-size: 15px; color: red; margin-top: 8px">${messenger}</p>
     </form>
 
 </div>

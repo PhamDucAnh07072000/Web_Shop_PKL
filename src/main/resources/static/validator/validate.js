@@ -100,6 +100,15 @@ Validator.minLength = function(selector, min, msg) {
     }
 }
 
+Validator.minmaxLength = function(selector, min, max, msg) {
+    return {
+        selector: selector,
+        test: function (value) {
+            return value.length >= min && value.length <= max ? undefined :  msg;
+        }
+    }
+}
+
 Validator.isConfirmed = function(selector, getConfirmPassword, msg) {
     return {
         selector: selector,

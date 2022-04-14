@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpSession;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -30,8 +31,9 @@ public class UserDetailServiceImp implements UserDetailsService {
 
             UserDetailCustom userDetailCustom = new UserDetailCustom(userEntity.getUsername(), userEntity.getPasswd(), grantedAuthorities);
             userDetailCustom.setEmail(userEntity.getEmail());
-            userDetailCustom.setAvarta(userEntity.getAvatar());
+            userDetailCustom.setAvatar(userEntity.getAvatar());
             userDetailCustom.setId(userEntity.getId());
+            userDetailCustom.setUserName(userEntity.getUsername());
             return userDetailCustom;
         }
     }

@@ -14,4 +14,7 @@ public interface CategoryRepositories extends JpaRepository<CategoryEntity, Long
 
     @Query(value = "SELECT * FROM category p", nativeQuery = true)
     List<CategoryEntity> FindAllCategory();
+
+//    @Query(value = "SELECT * FROM category p LIMIT ?1, ?2", nativeQuery = true)
+//    List<CategoryEntity> FindAllCategory(Integer page, Integer perpage);
 }

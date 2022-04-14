@@ -1,123 +1,9 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page pageEncoding="UTF-8" %>
 
-<!doctype html>
-<html lang="zxx">
+<jsp:include page="/WEB-INF/frontend/common/head.jsp"></jsp:include>
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>pillloMart</title>
-    <link rel="icon" href="/frontend/img/favicon.png">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/frontend/css/bootstrap.min.css">
-    <!-- animate CSS -->
-    <link rel="stylesheet" href="/frontend/css/animate.css">
-    <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="/frontend/css/owl.carousel.min.css">
-    <!-- font awesome CSS -->
-    <link rel="stylesheet" href="/frontend/css/all.css">
-    <!-- flaticon CSS -->
-    <link rel="stylesheet" href="/frontend/css/flaticon.css">
-    <link rel="stylesheet" href="/frontend/css/themify-icons.css">
-    <!-- font awesome CSS -->
-    <link rel="stylesheet" href="/frontend/css/magnific-popup.css">
-    <!-- swiper CSS -->
-    <link rel="stylesheet" href="/frontend/css/slick.css">
-    <!-- style CSS -->
-    <link rel="stylesheet" href="/frontend/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="/frontend/css/font-awesome.min.css">
-</head>
 
-<body>
-<!--::header part start::-->
-<header class="main_menu home_menu">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-lg-12">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="index.html"> <img src="/frontend/img/logo.png" alt="logo"> </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="menu_icon"><i class="fas fa-bars"></i></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">about</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
-                                   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    product
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                    <a class="dropdown-item" href="product_list.html"> product list</a>
-                                    <a class="dropdown-item" href="single-product.html">product details</a>
-
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_3"
-                                   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    pages
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                    <a class="dropdown-item" href="login.html">
-                                        login
-
-                                    </a>
-                                    <a class="dropdown-item" href="checkout.html">product checkout</a>
-                                    <a class="dropdown-item" href="cart.html">shopping cart</a>
-                                    <a class="dropdown-item" href="confirmation.html">confirmation</a>
-                                    <a class="dropdown-item" href="elements.html">elements</a>
-                                </div>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_2"
-                                   role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    blog
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                    <a class="dropdown-item" href="blog.html"> blog</a>
-                                    <a class="dropdown-item" href="single-blog.html">Single blog</a>
-                                </div>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="/BackEnd/Product/List">Admin</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="hearer_icon d-flex align-items-center">
-                        <a id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
-                        <a href="cart.html">
-                            <i class="flaticon-shopping-cart-black-shape"></i>
-                        </a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-    <div class="search_input" id="search_input_box">
-        <div class="container ">
-            <form class="d-flex justify-content-between search-inner">
-                <input type="text" class="form-control" id="search_input" placeholder="Search Here">
-                <button type="submit" class="btn"></button>
-                <span class="ti-close" id="close_search" title="Close Search"></span>
-            </form>
-        </div>
-    </div>
-</header>
-<!-- Header part end-->
 
 <!-- banner part start-->
 <section class="banner_part">
@@ -128,7 +14,7 @@
                     <div class="banner_text_iner">
                         <h1>Classy and strong</h1>
                         <p>${highestPrice.name}: ${highestPrice.descriptions}</p>
-                        <a href="product_list.html" class="btn_1">shop now</a>
+                        <a href="/FrontEnd/Product/List" class="btn_1">shop now</a>
                     </div>
                 </div>
             </div>
@@ -159,7 +45,7 @@
                                 <div class="single_product_content">
                                     <h5>Giá: ${d.price} VNĐ</h5>
                                     <h2> <a href="single-product.html">${d.name}: ${d.descriptions} </a> </h2>
-                                    <a href="product_list.html" class="btn_3">Explore Now</a>
+                                    <a href="/FrontEnd/Product/List" class="btn_3">Explore Now</a>
                                 </div>
                             </div>
                         </div>
@@ -227,7 +113,7 @@
                         <div class="single_product_item_thumb">
                             <img style="width: 360px; height: 249px" src="/Product/T3H/${k.img}" alt="#" class="img-fluid">
                         </div>
-                        <h3 style="text-align: center"> <a href="single-product.html">${k.name}</a> </h3>
+                        <h3 style="text-align: center"> <a href="http://localhost:8080/${k.id}">${k.name}</a> </h3>
                         <p style="text-align: center">From ${k.price} VNĐ</p>
                     </div>
                 </div>
@@ -280,27 +166,47 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="client_review_slider owl-carousel">
-                    <div class="single_client_review">
-                        <div class="client_img">
-                            <img src="/frontend/img/client.png" alt="#">
+                        <div class="single_client_review">
+                            <div class="client_img">
+                                <img style="width: 105px; height: 106px" src="/frontend/img/admin1.jpg" alt="#">
+                            </div>
+                            <p>"Không bao giờ là thất bại, tất cả là thử thách.</p>
+                            <h5>- VirusVozer</h5>
                         </div>
-                        <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
-                        <h5>- Micky Mouse</h5>
-                    </div>
-                    <div class="single_client_review">
-                        <div class="client_img">
-                            <img src="/frontend/img/client_1.png" alt="#">
+
+                        <div class="single_client_review">
+                            <div class="client_img">
+                                <img style="width: 105px; height: 106px" src="/frontend/img/Admin2.jpg" alt="#">
+                            </div>
+                            <p>"Tôi thích đi tour, tự sửa và tự độ xe cho mình.</p>
+                            <h5>- PhamNghiLd</h5>
                         </div>
-                        <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
-                        <h5>- Micky Mouse</h5>
-                    </div>
-                    <div class="single_client_review">
-                        <div class="client_img">
-                            <img src="/frontend/img/client_2.png" alt="#">
+
+                        <div class="single_client_review">
+                            <div class="client_img">
+                                <img style="width: 105px; height: 106px" src="/frontend/img/admin3.jpg" alt="#">
+                            </div>
+                            <p>"Những kẻ lữ hành không biết nơi nào họ sẽ đến..</p>
+                            <h5>- NgocDiem</h5>
                         </div>
-                        <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>
-                        <h5>- Micky Mouse</h5>
-                    </div>
+
+
+
+
+<%--                    <div class="single_client_review">--%>
+<%--                        <div class="client_img">--%>
+<%--                            <img src="/frontend/img/client_1.png" alt="#">--%>
+<%--                        </div>--%>
+<%--                        <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>--%>
+<%--                        <h5>- Micky Mouse</h5>--%>
+<%--                    </div>--%>
+<%--                    <div class="single_client_review">--%>
+<%--                        <div class="client_img">--%>
+<%--                            <img src="/frontend/img/client_2.png" alt="#">--%>
+<%--                        </div>--%>
+<%--                        <p>"Working in conjunction with humanitarian aid agencies, we have supported programmes to help alleviate human suffering.</p>--%>
+<%--                        <h5>- Micky Mouse</h5>--%>
+<%--                    </div>--%>
                 </div>
             </div>
         </div>
@@ -375,80 +281,4 @@
 </section>
 <!-- subscribe part end -->
 
-<!--::footer_part start::-->
-<footer class="footer_part">
-    <div class="footer_iner">
-        <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-8">
-                    <div class="footer_menu">
-                        <div class="footer_logo">
-                            <a href="index.html"><img src="/frontend/img/logo.png" alt="#"></a>
-                        </div>
-                        <div class="footer_menu_item">
-                            <a href="index.html">Home</a>
-                            <a href="about.html">About</a>
-                            <a href="product_list.html">Products</a>
-                            <a href="#">Pages</a>
-                            <a href="blog.html">Blog</a>
-                            <a href="contact.html">Contact</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="social_icon">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="copyright_part">
-        <div class="container">
-            <div class="row ">
-                <div class="col-lg-12">
-                    <div class="copyright_text">
-                        <P><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></P>
-                        <div class="copyright_link">
-                            <a href="#">Turms & Conditions</a>
-                            <a href="#">FAQ</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!--::footer_part end::-->
-
-<!-- jquery plugins here-->
-<script src="/frontend/js/jquery-1.12.1.min.js"></script>
-<!-- popper js -->
-<script src="/frontend/js/popper.min.js"></script>
-<!-- bootstrap js -->
-<script src="/frontend/js/bootstrap.min.js"></script>
-<!-- magnific popup js -->
-<script src="/frontend/js/jquery.magnific-popup.js"></script>
-<!-- carousel js -->
-<script src="/frontend/js/owl.carousel.min.js"></script>
-<script src="/frontend/js/jquery.nice-select.min.js"></script>
-<!-- slick js -->
-<script src="/frontend/js/slick.min.js"></script>
-<script src="/frontend/js/jquery.counterup.min.js"></script>
-<script src="/frontend/js/waypoints.min.js"></script>
-<script src="/frontend/js/contact.js"></script>
-<script src="/frontend/js/jquery.ajaxchimp.min.js"></script>
-<script src="/frontend/js/jquery.form.js"></script>
-<script src="/frontend/js/jquery.validate.min.js"></script>
-<script src="/frontend/js/mail-script.js"></script>
-<!-- custom js -->
-<script src="/frontend/js/custom.js"></script>
-</body>
-
-</html>
+<jsp:include page="/WEB-INF/frontend/common/foot.jsp"></jsp:include>

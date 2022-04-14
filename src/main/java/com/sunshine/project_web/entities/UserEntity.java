@@ -5,8 +5,8 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Data
 @Table(name = "user", schema = "web_ban_hang", catalog = "")
+@Data
 public class UserEntity {
     @Id
     @Column(name = "id", nullable = false)
@@ -19,7 +19,7 @@ public class UserEntity {
     @Column(name = "email", nullable = false, length = 255)
     private String email;
     @Basic
-    @Column(name = "passwd", nullable = false, length = 255)
+    @Column(name = "passwd", nullable = true, length = 255)
     private String passwd;
     @Basic
     @Column(name = "descriptions", nullable = true, length = 255)
@@ -33,4 +33,9 @@ public class UserEntity {
     @Basic
     @Column(name = "permissions", nullable = true, length = 255)
     private String permissions;
+
+
+
+
+
 }

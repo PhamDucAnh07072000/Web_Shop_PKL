@@ -21,7 +21,7 @@ public class PagingParamResolver implements HandlerMethodArgumentResolver {
         if(!StringUtils.isEmpty(pageStr)){
             page = Integer.valueOf(pageStr);
         }
-        Integer perpage = 5;
+        Integer perpage = 6;
         String perpageStr = webRequest.getParameter("perpage");
         if(!StringUtils.isEmpty(perpageStr)){
             perpage = Integer.valueOf(perpageStr);
@@ -32,6 +32,9 @@ public class PagingParamResolver implements HandlerMethodArgumentResolver {
         if (StringUtils.isEmpty(field)){
             field = "id";
         }
-        return new PagingObject(page, perpage, sort, keyWord, path, field, mavContainer);
+        String brand = webRequest.getParameter("brand");
+        String start = webRequest.getParameter("start");
+        String end = webRequest.getParameter("end");
+        return new PagingObject(page, perpage, sort, keyWord, path, field, brand, start, end, mavContainer);
     }
 }

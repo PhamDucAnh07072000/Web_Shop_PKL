@@ -86,4 +86,8 @@
         }
 
     };
+
+    $("#btn").click(function () {
+        window.location.href = '/BackEnd/${path}/List?page=${page}&sort=${sort}&field=${field}&keyWord=' + $('#searchProduct').val()
+    })
 </script>
