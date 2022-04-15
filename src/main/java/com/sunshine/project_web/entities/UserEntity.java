@@ -3,6 +3,10 @@ package com.sunshine.project_web.entities;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "user", schema = "web_ban_hang", catalog = "")
@@ -33,8 +37,7 @@ public class UserEntity {
     @Basic
     @Column(name = "permissions", nullable = true, length = 255)
     private String permissions;
-
-
+    
 
 
 

@@ -1,6 +1,8 @@
 package com.sunshine.project_web.entities;
 
 import lombok.Data;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.Fetch;
 
 import javax.persistence.*;
 
@@ -32,7 +34,7 @@ public class CheckoutcartEntity {
     @JoinColumn(name = "productid", referencedColumnName = "id", insertable = false, updatable = false)
     private ProductEntity productEntity;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "userid", referencedColumnName = "id", insertable = false, updatable = false)
     private UserEntity userEntity;
 }
